@@ -1,0 +1,24 @@
+{
+  "model": "smollm2-135m",
+  "mode": "eager",
+  "attn_impl": "default",
+  "prompt_len": 128,
+  "wall_ms_per_step": 81.4008,
+  "kernel_ms_per_step": 7.985,
+  "host_gap_ms_per_step": 73.4158,
+  "kernels_per_step": 1222.0,
+  "weight_floor_ms": 1.0209,
+  "categories_ms": {
+    "elementwise_other": 3.6312,
+    "gemm_weights": 3.4635,
+    "attention": 0.8604,
+    "sampling": 0.0299
+  },
+  "categories_count": {
+    "elementwise_other": 980.0,
+    "gemm_weights": 211.0,
+    "attention": 30.0,
+    "sampling": 1.0
+  },
+  "trace": "/home/ansh/mega4060/results/trace_breakdown_eager_128.json"
+}

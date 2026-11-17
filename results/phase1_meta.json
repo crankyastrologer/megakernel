@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-11-14T06:36:24Z",
+  "torch": "2.9.1+cu126",
+  "torch_cuda": "12.6",
+  "peak_read_gbs": 263.52,
+  "measure_steps": 50,
+  "warmup_steps": 10,
+  "compile_mode": "default",
+  "clocks_before": "1620 MHz, 7001 MHz, 8.18 W, 43",
+  "models": {
+    "qwen2.5-1.5b": {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "short": "Qwen2.5-1.5B",
+      "weight_gb": 3.087428608,
+      "num_layers": 28,
+      "num_kv_heads": 2,
+      "hidden_size": 1536,
+      "params": 1543714304
+    },
+    "smollm2-135m": {
+      "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "short": "SmolLM2-135M",
+      "weight_gb": 0.269030016,
+      "num_layers": 30,
+      "num_kv_heads": 3,
+      "hidden_size": 576,
+      "params": 134515008
+    }
+  },
+  "clocks_after": "2355 MHz, 9022 MHz, 18.28 W, 43",
+  "generate_divergence": {
+    "qwen2.5-1.5b|128": 9,
+    "qwen2.5-1.5b|512": null,
+    "qwen2.5-1.5b|2048": null,
+    "smollm2-135m|128": null,
+    "smollm2-135m|512": null,
+    "smollm2-135m|2048": null
+  }
+}

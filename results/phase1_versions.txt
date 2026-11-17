@@ -1,0 +1,8 @@
+timestamp_utc: 2026-11-13T11:01:02Z
+models: smollm2-135m,qwen2.5-1.5b
+prompt_lengths: 128,512,2048
+measure_steps: config default
+warmup_steps: config default
+compile_mode: default  (reduce-overhead segfaults on this stack)
+main venv: torch 2.9.1+cu126 cuda 12.6 triton 3.5.1 transformers 5.22.2
+build: MODELS=smollm2-135m,qwen2.5-1.5b PLENS=128,512,2048 STEPS= ./scripts/phase1.sh

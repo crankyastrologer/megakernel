@@ -1,0 +1,28 @@
+models:
+  smollm2-135m:
+    id: HuggingFaceTB/SmolLM2-135M-Instruct
+    short: SmolLM2-135M
+    params: 135000000
+  qwen2.5-1.5b:
+    id: Qwen/Qwen2.5-1.5B-Instruct
+    short: Qwen2.5-1.5B
+    params: 1540000000
+  # Optional: TinyLlama has max_position_embeddings=2048, so it cannot decode
+  # after a 2048-token prompt. Only valid for prompt_lengths <= 1984.
+  tinyllama-1.1b:
+    id: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    short: TinyLlama-1.1B
+    params: 1100000000
+
+runtime:
+  dtype: bfloat16
+  prompt_lengths: [128, 512, 2048]
+  warmup_steps: 10
+  measure_steps: 50
+  graph_warmup_steps: 10
+  profile_steps: 8
+
+roofline:
+  # results/membw.json: sustained Triton read, GPU boosts to ~9022 MHz under load.
+  # 263.5 GB/s measured; theoretical at that clock ~288.7 GB/s.
+  peak_read_gbs: 263.5

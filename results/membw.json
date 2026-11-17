@@ -1,0 +1,21 @@
+{
+  "buffer_mib": 512,
+  "copy_ms": 5.4913,
+  "copy_gbs": 195.53,
+  "sum_ms": 2.6552,
+  "sum_gbs": 202.19,
+  "triton_read_variants_gbs": [
+    261.6,
+    260.93,
+    263.21,
+    262.13,
+    263.01,
+    263.52
+  ],
+  "read_gbs": 263.52,
+  "mem_clock_mhz": 9022.0,
+  "theoretical_gbs_at_mem_clock": 288.7,
+  "clocks_before": "1620 MHz, 7001 MHz, 8.21 W, 47",
+  "clocks_after": "2100 MHz, 9022 MHz, 33.33 W, 51",
+  "note": "read_gbs = best sustained Triton streaming-read result; roofline denominator"
+}

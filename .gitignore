@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.venv-vllm/
+
+# Models and downloads
+models/
+*.gguf
+
+# Large profiling artifacts (regenerate with bench/breakdown.py / phase0.sh)
+results/trace_*.json
+results/*.nsys-rep
+results/*.sqlite
+results/coop_test
+results/*.log
+results/phase1_*png
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+article.md
+PLAN.md

@@ -1,0 +1,7 @@
+model,mode,prompt_len,steps,median_ms,kernels_per_step,kernel_ms_per_step,memcpy_ms_per_step,gap_ms_per_step,profiled_wall_ms_per_step,profiler_gap_ms_per_step,trace
+qwen2.5-1.5b,eager,128,8,24.661,1170.0,12.512753624999776,0.0,12.1482,49.685816375017566,37.17306275001779,/home/ansh/mega4060/results/trace_qwen2.5-1.5b_eager.json
+qwen2.5-1.5b,static,128,8,26.5948,1373.0,12.807836874999985,0.0,13.787,59.59775662500987,46.78991975000989,/home/ansh/mega4060/results/trace_qwen2.5-1.5b_static.json
+qwen2.5-1.5b,graph,128,8,14.5254,1373.0,23.608792625000106,0.0031993749999999995,0.0,24.179999125010454,0.5680071250103466,/home/ansh/mega4060/results/trace_qwen2.5-1.5b_graph.json
+smollm2-135m,eager,128,8,20.7073,1222.0,3.495454124999956,0.0,17.2118,49.440973000059785,45.94551887505983,/home/ansh/mega4060/results/trace_smollm2-135m_eager.json
+smollm2-135m,static,128,8,25.495,1469.0,4.437571999999947,0.0,21.0574,53.099824624951,48.66225262495105,/home/ansh/mega4060/results/trace_smollm2-135m_static.json
+smollm2-135m,graph,128,8,4.8026,1469.0,8.994027875000029,0.0032654999999999993,0.0,9.705633125008717,0.7083397500086881,/home/ansh/mega4060/results/trace_smollm2-135m_graph.json
