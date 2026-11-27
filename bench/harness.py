@@ -216,10 +216,29 @@ def _make_compile(model, ids, n_steps, mode=None):
     return [first], step, {"max_cache_len": maxlen, "compiled": compiled}
 
 
+def _make_graph_fused(model, ids, n_steps):
+    """Build the Triton fused decoder and its captured graph.
+
+    Args:
+        model (transformers.PreTrainedModel): Loaded causal LM on CUDA.
+        ids (torch.LongTensor): Prompt token ids ``(1, prompt_len)``.
+        n_steps (int): Number of graph replays to size the cache for.
+
+    Returns:
+        tuple[list[torch.Tensor], Callable[[], torch.Tensor], dict]: Two prefix
+        tokens, the replay step function, and decoder metadata.
+    """
+    from bench.fused import FusedDecoder
+
+    dec = FusedDecoder(model, ids, n_steps)
+    return [dec.first, dec.second], dec.step, {"max_cache_len": dec.maxlen, "fused": dec}
+
+
 BUILDERS = {
     "eager": _make_eager,
     "static": _make_static,
     "graph": _make_graph,
+    "graph_fused": _make_graph_fused,
     "compile": _make_compile,
 }
 

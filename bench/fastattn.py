@@ -164,6 +164,7 @@ def patch_llama_fast_decode():
         if (
             past_key_values is not None
             and isinstance(past_key_values, StaticCache)
+            and hidden_states.shape[0] == 1
             and hidden_states.shape[1] == 1
             and hidden_states.dtype == torch.bfloat16
         ):

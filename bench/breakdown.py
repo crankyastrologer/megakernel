@@ -33,7 +33,19 @@ def category(name):
     n = name.lower()
     if "flash" in n or "attention" in n or "attn" in n or "fmha" in n or "sdpa" in n:
         return "attention"
-    if "gemm" in n or "sgemm" in n or "cutlass" in n or "cublas" in n or "gemv" in n or "wmma" in n or "ampere_" in n:
+    if (
+        "gemm" in n
+        or "sgemm" in n
+        or "cutlass" in n
+        or "cublas" in n
+        or "gemv" in n
+        or "wmma" in n
+        or "ampere_" in n
+        or "gate_up" in n
+        or "swiglu" in n
+        or "addmm" in n
+        or "addmv" in n
+    ):
         return "gemm_weights"
     if "argmax" in n or "topk" in n or "sort" in n:
         return "sampling"

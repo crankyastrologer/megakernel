@@ -1,0 +1,26 @@
+{
+  "model": "smollm2-135m",
+  "mode": "graph_fused",
+  "attn_impl": "default",
+  "prompt_len": 2048,
+  "wall_ms_per_step": 1.9784,
+  "kernel_ms_per_step": 2.2856,
+  "host_gap_ms_per_step": 0.0,
+  "kernels_per_step": 254.0,
+  "weight_floor_ms": 1.0209,
+  "categories_ms": {
+    "gemm_weights": 1.6776,
+    "attention": 0.505,
+    "elementwise_other": 0.0889,
+    "sampling": 0.013,
+    "memcpy": 0.0011
+  },
+  "categories_count": {
+    "gemm_weights": 121.0,
+    "elementwise_other": 71.0,
+    "attention": 60.0,
+    "sampling": 1.0,
+    "memcpy": 1.0
+  },
+  "trace": "/home/ansh/mega4060/results/trace_breakdown_graph_fused_2048.json"
+}
