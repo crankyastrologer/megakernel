@@ -1,0 +1,7 @@
+projection,weight_mb,floor_ms,measured_ms,pct_of_floor,kernels_per_step,ctas_per_kernel,overhead_us_per_kernel
+qkv,33.18,0.1259,0.2193,57.4,30,30,3.11
+o_proj,19.91,0.0755,0.1736,43.5,30,18,3.27
+gate+up,106.17,0.4029,0.5853,68.8,30,48,6.08
+down,53.08,0.2014,0.3209,62.8,30,18,3.98
+lm_head,56.62,0.2149,0.2913,73.8,1,n/a,76.43
+total,268.96,1.0206,1.5904,64.2,121,,

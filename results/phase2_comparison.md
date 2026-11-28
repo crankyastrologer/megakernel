@@ -7,6 +7,7 @@
 
 Verification and benchmark protocol: `results/phase2_verification.md`.
 Batch scaling: `results/batch_sweep.md`.
+Figures: `results/figures_phase2.md`.
 
 This document compares the vanilla HF CUDA-graph decode step with the fused
 Triton step in `bench/fused.py`. It lists the old kernels, the new kernels,

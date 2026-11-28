@@ -11,6 +11,7 @@ Running log for Phase 2. Companion to `PLAN.md`. Updated at each checkpoint
 Kernel comparison: `results/phase2_comparison.md` (HF vs fused, stage by stage).
 Verification and benchmark protocol: `results/phase2_verification.md`.
 Batch scaling: `results/batch_sweep.md` (HF eager/graph/vLLM at B=1/2/4/8).
+Figures: `results/figures_phase2.md` (fig 4-9).
 
 Purpose: keep the debugging trail, the numbers behind each decision, and the
 architecture rationale in one place. The article should use this as the source

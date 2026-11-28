@@ -1,0 +1,5 @@
+design,ms_30_layers,delta_vs_pure_gemv_ms,note
+pure GEMV (no norm),0.212,0.000,reference
+1-CTA norm_stats + GEMV,0.258,0.046,"+46 us, extra launch"
+norm reduction in every block,0.312,0.100,+100 us: stream serialises
+producer partials + GEMV (shipped),0.219,0.007,+7 us
